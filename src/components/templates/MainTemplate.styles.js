@@ -4,7 +4,7 @@ import Wave from '../../assets/svg/test.svg';
 const Wrapper = styled.div`
   /* background-image: url(${Wave}); */
   min-height: 100vh;
-  max-height: 100vw;
+  max-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

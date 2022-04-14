@@ -3,15 +3,29 @@ import { Wrapper } from './Navigation.styles';
 const Navigation = () => {
   return (
     <Wrapper>
-      <div>{'<bwladyka/>'}</div>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
-      </ul>
-      <a href="google.com">GitHub</a>
-      <a href="google.com">Linkedin</a>
+      <h3>{'<bwladyka/>'}</h3>
+      <div className="nav-links">
+        <ul>
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Projects</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+        </ul>
+        <a className="nav-icon-links" href="google.com">
+          G
+        </a>
+        <a className="nav-icon-links" href="google.com">
+          L
+        </a>
+      </div>
     </Wrapper>
   );
 };

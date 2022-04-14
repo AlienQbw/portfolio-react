@@ -22,4 +22,16 @@ export const GlobalStyle = createGlobalStyle`
   p{
       color: ${({ theme }) => theme.colors.text};
   }
+  h1, h2, h3{
+    margin: 0;
+  }
+  h1{
+        font-size: ${({ theme }) => theme.fontSize.l}
+  }
+  h2{
+        font-size: ${({ theme }) => theme.fontSize.lm}
+  }
+  h3{
+    font-size: ${({ theme }) => theme.fontSize.m}
+  }
 `;
