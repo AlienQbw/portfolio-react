@@ -1,4 +1,6 @@
+import { Wrapper } from './Contact.styles';
+
 const Contact = () => {
-  return <div>Contact component</div>;
+  return <Wrapper>Contact component</Wrapper>;
 };
 export default Contact;

@@ -1,4 +1,6 @@
+import { Wrapper } from './Projects.styles';
+
 const Projects = () => {
-  return <div>My projects component</div>;
+  return <Wrapper>My projects component</Wrapper>;
 };
 export default Projects;
