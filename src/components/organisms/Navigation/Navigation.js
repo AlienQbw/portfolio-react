@@ -5,7 +5,9 @@ import linkedinIcon from '../../../assets/resources/icons/linkedIn.png';
 const Navigation = () => {
   return (
     <Wrapper>
-      <h3>{'<bwladyka/>'}</h3>
+      <h3>
+        <Link to="/">{'<bwladyka/>'}</Link>
+      </h3>
       <div className="nav-links">
         <ul>
           <li>

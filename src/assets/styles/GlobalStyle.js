@@ -21,7 +21,9 @@ export const GlobalStyle = createGlobalStyle`
   a, button {
     /* font-family: 'Montserrat', sans-serif; */
     color: ${({ theme }) => theme.colors.text};
+    text-decoration: none;
   }
+
   p{
       color: ${({ theme }) => theme.colors.text};
   }

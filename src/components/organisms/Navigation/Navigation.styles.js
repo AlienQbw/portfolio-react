@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   h3 {
     font-size: ${({ theme }) => theme.fontSize.m};
     padding: 20px 40px 20px 40px;
+
+    a {
+      color: ${({ theme }) => theme.colors.orange}
+    }
   }
   .nav-links {
     padding: 20px;
@@ -35,7 +39,8 @@ export const Wrapper = styled.div`
     margin: 15px;
     height: 40px;
     width: 40px;
-    img{
+
+    img {
       height: 40px;
       width: 40px;
     }
