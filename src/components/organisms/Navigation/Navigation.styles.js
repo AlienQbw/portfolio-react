@@ -32,6 +32,12 @@ export const Wrapper = styled.div`
     color: ${({ theme }) => theme.colors.links};
   }
   .nav-icon-links {
-    padding: 10px;
+    margin: 15px;
+    height: 40px;
+    width: 40px;
+    img{
+      height: 40px;
+      width: 40px;
+    }
   }
 `;
