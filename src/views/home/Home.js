@@ -5,8 +5,8 @@ const Home = () => {
     <Wrapper>
       <div className="name">
         <div>
-          <h1>Bartosz</h1>
-          <h1>Władyka</h1>
+          <h1>BARTOSZ</h1>
+          <h1>WŁADYKA</h1>
           <h2>Frontend Developer</h2>
         </div>
       </div>

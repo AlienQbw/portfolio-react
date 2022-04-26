@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Wrapper } from './Navigation.styles';
 
 const Navigation = () => {
@@ -7,16 +8,16 @@ const Navigation = () => {
       <div className="nav-links">
         <ul>
           <li>
-            <a href="">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="">Projects</a>
+            <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <a href="">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
         <a className="nav-icon-links" href="google.com">

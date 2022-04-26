@@ -13,8 +13,9 @@ export const Wrapper = styled.div`
   .name {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
+    padding-left: 100px;
     float: left;
     width: 50%;
     height: 100%;
@@ -30,5 +31,9 @@ export const Wrapper = styled.div`
     float: left;
     width: 50%;
     height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 100px;
   }
 `;
