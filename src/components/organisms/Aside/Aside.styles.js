@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
     position: relative;
     color: transparent;
     transition: 1s;
-    font-size: ${({ theme }) => theme.fontSize.m};
+    font-size: ${({ theme }) => theme.fontSize.sm};
   }
   .aside-line:hover {
     color: ${({ theme }) => theme.colors.links};
@@ -25,14 +25,16 @@ export const Wrapper = styled.div`
   .aside-line:after {
     content: '';
     position: absolute;
-    width: 75px;
+    width: 70px;
     height: 3px;
     background-color: ${({ theme }) => theme.colors.orange};
-    top: 17px;
+    top: 14px;
     left: -5px;
     transition: 1s;
+    border-radius: 10px;
   }
   .active:after {
-    width: 95px;
+    width: 90px;
+    height: 4px;
   }
 `;
