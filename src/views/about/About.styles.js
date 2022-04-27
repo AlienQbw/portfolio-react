@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
+    /* TODO: can use repeat(6, 1fr) */
+    /*
+    * For start and end we can use 1 / 4 (which will mean that it starts at 1 and ends at 4)
+    */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     h2 {
