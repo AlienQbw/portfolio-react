@@ -11,11 +11,7 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
-    /* TODO: can use repeat(6, 1fr) */
-    /*
-    * For start and end we can use 1 / 4 (which will mean that it starts at 1 and ends at 4)
-    */
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     h2 {
       color: ${({ theme: { colors } }) => colors.links};
@@ -23,15 +19,31 @@ export const Wrapper = styled.div`
     .about-container {
       grid-column-start: 1;
       grid-column-end: 7;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       .about-me {
-        float: left;
+        margin: auto;
+        margin-top: 50px;
+        max-width: 90%;
+        grid-column: 1;
+        padding: 40px;
       }
       .skills-experience {
+        margin: auto;
+        margin-top: 50px;
+        max-width: 90%;
+        grid-column: 2;
+        padding: 40px;
+      }
+      .paragraph {
+        padding-left: 25px;
       }
     }
     .skills-container {
+      margin: auto;
+      margin-top: 50px;
       color: ${({ theme: { colors } }) => colors.text};
-      padding: 0 0px 0 20px;
+
       grid-row: 2;
       li {
         font-size: ${({ theme: { fontSize } }) => fontSize.sm};
