@@ -9,16 +9,22 @@ const Projects = () => {
   /* TODO: clean unused .svg's */
   return (
     <Wrapper>
-      {/*       <div className="top-bar">
-        <img className="top-bar-buttons" src={TopBarButtonsImage} alt="" />
-        <img className="top-bar-middle" src={TopBarMiddleImage} alt="" />
-        <img className="top-bar-squares" src={TopBarSquaresImage} alt="" />
-      </div> */}
       <img className="human-image" src={HumanImage} alt="" />
+      <div className="title-container">
+        <h1 className="title">
+          What do I do<span>?</span>
+        </h1>
+      </div>
       <div className="projects-container">
         <div className="project-card">
           <img className="project-card-image" src={MinimalisticCover} alt="" />
           <div className="card-overlay">
+            <h3>Minimalistic</h3>
+            <p>
+              It's a wallpaper app, which uses Image compressor algorithm in
+              order to create a picture thumbnails. There is also builtin
+              searchbar
+            </p>
             <a href="github.com">Link</a>
             <a href="github.com">Github</a>
             <a href="github.com">More about this project</a>
@@ -35,7 +41,6 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      {/*       <div className="bottom-bar"></div> */}
     </Wrapper>
   );
 };

@@ -1,3 +1,4 @@
+import { computeHeadingLevel } from '@testing-library/react';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -11,14 +12,9 @@ export const Wrapper = styled.div`
     right: -450px;
     animation: humanAnimation 4s linear;
   }
-  .top-bar {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 2px solid white;
+  .title-container {
+    width: 100%;
+    text-align: center;
   }
   .projects-container {
     padding: 15px;
@@ -67,14 +63,6 @@ export const Wrapper = styled.div`
       max-width: 100%;
       max-height: 100%;
     }
-  }
-
-  .bottom-bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10px;
-    border-bottom: 2px solid white;
   }
 
   @keyframes humanAnimation {
