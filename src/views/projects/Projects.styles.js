@@ -61,13 +61,14 @@ export const Wrapper = styled.div`
         margin: 5px;
       }
     }
+    img {
+      min-width: 100%;
+      aspect-ratio: 16/9;
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 
-  img {
-    aspect-ratio: 16/9;
-    max-width: 100%;
-    max-height: 100%;
-  }
   .bottom-bar {
     position: absolute;
     bottom: 0;
