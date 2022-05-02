@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Wave from '../../assets/svg/test.svg';
+import Wave from '../../assets/svg/wave.svg';
 /* TODO: wave.svg animation in the background (if you uncomment background-image, the other svg is working) */
 const Wrapper = styled.div`
   /* background-image: url(${Wave}); */
