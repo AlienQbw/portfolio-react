@@ -6,8 +6,10 @@ export const Wrapper = styled.div`
   height: calc(100vh - 80px);
   .human-image {
     position: absolute;
+    z-index: 99;
     bottom: 0;
-    right: 0;
+    right: -450px;
+    animation: humanAnimation 4s linear;
   }
   .top-bar {
     padding-left: 40px;
@@ -30,12 +32,39 @@ export const Wrapper = styled.div`
     width: 100%;
     height: calc(100vh - 80px);
   }
-  .project1 {
+  .project-card {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    aspect-ratio: 16/9;
+
+    .card-overlay {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      aspect-ratio: 16/9;
+      min-width: 100%;
+      visibility: none;
+      opacity: 0;
+      background: black;
+      transition: opacity 0.5s linear;
+    }
+    :hover > .card-overlay {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.9;
+
+      a {
+        margin: 5px;
+      }
+    }
   }
+
   img {
+    aspect-ratio: 16/9;
     max-width: 100%;
     max-height: 100%;
   }
@@ -45,5 +74,20 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 10px;
     border-bottom: 2px solid white;
+  }
+
+  @keyframes humanAnimation {
+    25% {
+      right: 0;
+    }
+    50% {
+      right: 0;
+    }
+    75% {
+      right: 0;
+    }
+    100% {
+      right: -450px;
+    }
   }
 `;
