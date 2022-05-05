@@ -16,8 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: ${({ theme }) => theme.colors.background};
   }
-
   a, button {
     /* font-family: 'Montserrat', sans-serif; */
     color: ${({ theme }) => theme.colors.text};

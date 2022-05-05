@@ -8,75 +8,54 @@ export const Wrapper = styled.div`
   .human-image {
     position: absolute;
     z-index: 99;
-    bottom: 0;
-    right: -450px;
-    animation: humanAnimation 4s linear;
+    bottom: -11px;
+    right: 0;
   }
-  .title-container {
-    width: 100%;
-    text-align: center;
+  .shape-image {
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    left: 45%;
+    top: 25%;
   }
-  .projects-container {
-    padding: 15px;
-    display: none; /* Safari and Chrome */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    scrollbar-width: none; /* Firefox */
-    overflow-y: scroll;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    width: 100%;
-    height: calc(100vh - 80px);
-  }
-  .project-card {
+  .container {
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    aspect-ratio: 16/9;
+    align-items: left;
+    flex-direction: column;
+    .links-containers {
+      position: relative;
 
-    .card-overlay {
-      position: absolute;
-      max-width: 100%;
-      max-height: 100%;
-      aspect-ratio: 16/9;
-      min-width: 100%;
-      visibility: none;
-      opacity: 0;
-      background: black;
-      transition: opacity 0.5s linear;
-    }
-    :hover > .card-overlay {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0.9;
-
-      a {
-        margin: 5px;
+      .discover-image {
+        position: absolute;
+        top: -100px;
+        left: 230px;
+        animation: arrowJumping 1s linear infinite;
       }
-    }
-    img {
-      min-width: 100%;
-      aspect-ratio: 16/9;
-      max-width: 100%;
-      max-height: 100%;
+      .link-container {
+        width: fit-content;
+        h2 {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          font-size: ${({ theme: { fontSize } }) => fontSize.l};
+          font-weight: bold;
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
     }
   }
 
-  @keyframes humanAnimation {
-    25% {
-      right: 0;
+  @keyframes arrowJumping {
+    0% {
+      top: -100px;
     }
     50% {
-      right: 0;
-    }
-    75% {
-      right: 0;
+      top: -105px;
     }
     100% {
-      right: -450px;
+      top: -100px;
     }
   }
 `;
