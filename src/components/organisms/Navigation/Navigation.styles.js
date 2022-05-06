@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
     padding: 20px 40px 20px 40px;
 
     a {
-      color: ${({ theme }) => theme.colors.orange}
+      color: ${({ theme }) => theme.colors.orange};
     }
   }
   .nav-links {
@@ -29,7 +29,6 @@ export const Wrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize.sm};
     list-style-type: none;
     margin: 5px 20px 5px 20px;
-    margin
   }
   ul li a {
     text-decoration: none;
