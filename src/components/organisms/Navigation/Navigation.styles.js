@@ -31,8 +31,20 @@ export const Wrapper = styled.div`
     margin: 5px 20px 5px 20px;
   }
   ul li a {
+    display: inline-block;
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.links};
+    color: ${({ theme: { colors } }) => colors.links};
+    border-bottom: 1px solid ${({ theme: { colors } }) => colors.orange};
+    border: transparent;
+    :hover {
+      transition: 0.25s;
+      transform: rotate(5deg);
+      border-bottom: 1px solid ${({ theme: { colors } }) => colors.orange};
+    }
+    :active {
+      transition: 1s;
+      transform: scale(1.8);
+    }
   }
   .nav-icon-links {
     margin: 15px;

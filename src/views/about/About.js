@@ -13,12 +13,18 @@ const About = () => {
                 & creation. I love writing websites, and discovering new
                 technologies.
                 <br />
+                <br />
                 I have just graduated (2022) from the Poznan University of
                 Technology in the field of "Engineering Management".
                 <br />
+                <br />
                 In addition to programming, I play the piano, computer games,
-                Arduino, watch formula 1, and create various designs for
-                smartwatch faces.
+                Arduino, watch formula 1, and create various designs for&nbsp;
+                <a href="https://www.facer.io/u/alienq" target="_blank">
+                  smartwatch faces
+                </a>
+                .
+                <br />
                 <br />
                 If you want to know more about me, check out some of my previous
                 projects.
@@ -33,8 +39,10 @@ const About = () => {
                 my interest with the begining of my studies, and i’m in love
                 with it ever since.
                 <br />
+                <br />
                 Experience and knowledge that I get could be shorlt described as
                 “Google” but of course there is more to that.
+                <br />
                 <br />
                 I’ve completed online courses in languages of my interest, I’ve
               </p>

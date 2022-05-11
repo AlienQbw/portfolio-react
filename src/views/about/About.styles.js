@@ -37,6 +37,11 @@ export const Wrapper = styled.div`
       }
       .paragraph {
         padding-left: 25px;
+
+        a {
+          color: ${({ theme: { colors } }) => colors.links};
+          text-decoration: underline;
+        }
       }
     }
     .skills-container {
