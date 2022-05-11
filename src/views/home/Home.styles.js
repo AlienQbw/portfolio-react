@@ -9,6 +9,20 @@ export const Wrapper = styled.div`
   }
   h2 {
     color: ${({ theme }) => theme.colors.text};
+    span {
+      position: relative;
+      ::after {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        right: -23px;
+        content: '';
+        width: 23px;
+        height: 4px;
+        background: ${({ theme: { colors } }) => colors.text};
+        animation: writingCursor 1s infinite linear;
+      }
+    }
   }
   .name {
     display: flex;
@@ -35,5 +49,17 @@ export const Wrapper = styled.div`
     justify-content: left;
     align-items: center;
     padding-bottom: 100px;
+  }
+
+  @keyframes writingCursor {
+    25% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
