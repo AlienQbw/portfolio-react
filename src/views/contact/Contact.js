@@ -8,9 +8,19 @@ const Contact = () => {
       </div>
       <div className="contact-header-2">
         <h1>
-          bwladyka.bw
+          <span id="span-1">b</span>
+          <span id="span-2">w</span>
+          <span id="span-3">l</span>
+          <span id="span-4">a</span>
+          <span id="span-5">d</span>
+          <span id="span-6">y</span>
+          <span id="span-7">k</span>
+          <span id="span-8">a</span>
+          <span id="span-9">.</span>
+          <span id="span-10">b</span>
+          <span id="span-11">w</span>
           <br />
-          <span>@</span>gmail.com
+          <span className="at-span">@</span>gmail.com
         </h1>
       </div>
       <div className="contact-image">

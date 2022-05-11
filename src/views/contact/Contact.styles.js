@@ -23,11 +23,57 @@ export const Wrapper = styled.div`
       font-size: ${({ theme: { fontSize } }) => fontSize.xl};
       span {
         display: inline-block;
+      }
+      .at-span {
         color: ${({ theme: { colors } }) => colors.orange};
         padding-left: 50px;
         transform-origin: center;
         animation: mailSignRotate 3s ease-out infinite;
         animation-delay: 1s;
+      }
+      #span-1 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 1);
+      }
+      #span-2 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 1.4);
+      }
+      #span-3 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 1.6);
+      }
+      #span-4 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 1.8);
+      }
+      #span-5 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 2);
+      }
+      #span-6 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 2.2);
+      }
+      #span-7 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 2.4);
+      }
+      #span-8 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 2.6);
+      }
+      #span-9 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 2.8);
+      }
+      #span-10 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 3);
+      }
+      #span-11 {
+        animation: lettersAnimation 1s 1 linear;
+        animation-delay: calc(0.2s * 3.2);
       }
     }
   }
@@ -77,6 +123,12 @@ export const Wrapper = styled.div`
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+  @keyframes lettersAnimation {
+    0%,
+    80% {
+      transform: rotateY(360deg);
     }
   }
 `;
