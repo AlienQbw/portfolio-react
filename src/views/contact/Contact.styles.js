@@ -29,7 +29,6 @@ export const Wrapper = styled.div`
         padding-left: 50px;
         transform-origin: center;
         animation: mailSignRotate 3s ease-out infinite;
-        animation-delay: 1s;
       }
       #span-1 {
         animation: lettersAnimation 1s 1 linear;
