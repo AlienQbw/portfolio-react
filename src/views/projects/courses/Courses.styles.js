@@ -12,10 +12,15 @@ export const Wrapper = styled.div`
     grid-template-rows: auto 1fr auto;
     grid-gap: 5px;
     .grid-item {
+      h3 {
+        height: 100px;
+      }
       img {
         aspect-ratio: 16/9;
         width: 100%;
       }
+    }
+    #grid-item-1 {
     }
   }
 `;
