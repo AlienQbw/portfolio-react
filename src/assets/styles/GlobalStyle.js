@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Futura, Futura-Medium, "Futura Medium", "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: ${({ theme }) => theme.colors.background};
   }
   a, button {

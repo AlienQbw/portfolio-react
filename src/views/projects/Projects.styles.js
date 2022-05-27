@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   .human-image {
     position: absolute;
     z-index: 99;
-    bottom: -11px;
+    bottom: 0px;
     right: 0;
   }
   .shape-image {

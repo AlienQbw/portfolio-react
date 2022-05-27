@@ -9,17 +9,27 @@ import { Link, Route, Routes } from 'react-router-dom';
 import CodingProjects from './codingProjects/CodingProjects';
 import Hobbies from './hobbies/Hobbies';
 import Courses from './courses/Courses';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Projects = ({ theme }) => {
   /* TODO: clean unused .svg's */
+  const [toggleBackground, setToggleBackground] = useState(true);
+
+  const changeBackground = (val) => {
+    val ? setToggleBackground(false) : setToggleBackground(true);
+  };
+
   useEffect(() => {
-    document.body.style.background =
-      'linear-gradient(to right,#15304B 0%,#15304B 60%,#ffffff 50%,#ffffff 100%)';
+    toggleBackground
+      ? (document.body.style.background =
+          'linear-gradient(to right,#15304B 0%,#15304B 60%,#ffffff 50%,#ffffff 100%)')
+      : (document.body.style.background = '#15304B');
+
     return () => {
       document.body.style.background = '#15304B';
     };
-  });
+  }, [toggleBackground]);
+
   return (
     <Wrapper>
       <Routes>
@@ -53,7 +63,10 @@ const Projects = ({ theme }) => {
           }
         />
         <Route path="/coding" element={<CodingProjects />} />
-        <Route path="/courses" element={<Courses />} />
+        <Route
+          path="/courses"
+          element={<Courses changeBackground={changeBackground} />}
+        />
         <Route path="/hobbies" element={<Hobbies />} />
       </Routes>
     </Wrapper>
