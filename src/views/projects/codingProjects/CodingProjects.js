@@ -1,38 +1,34 @@
+import { useEffect, useState } from 'react';
 import { Wrapper } from './CodingProjects.styles';
-import MinimalisticCover from '../../../assets/resources/project-covers/minimalistic.gif';
-const CodingProjects = () => {
+import projectsData from 'data/ProjectsData';
+import ProjectCard from 'components/organisms/ProjectCard/ProjectCard';
+
+const CodingProjects = ({ changeBackground }) => {
+  const [data, setData] = useState([
+    {
+      cover: '',
+      title: '',
+      description: '',
+      github: '',
+      liveversion: '',
+      technology: [],
+    },
+  ]);
+
+  useEffect(() => {
+    changeBackground(true);
+    setData([...projectsData]);
+
+    return () => {
+      changeBackground(false);
+    };
+  }, []);
   return (
     <Wrapper>
-      <div className="title-container">
-        <h1 className="title">
-          What do I do<span>?</span>
-        </h1>
-      </div>
       <div className="projects-container">
-        <div className="project-card">
-          <img className="project-card-image" src={MinimalisticCover} alt="" />
-          <div className="card-overlay">
-            <h3>Minimalistic</h3>
-            <p>
-              It's a wallpaper app, which uses Image compressor algorithm in
-              order to create a picture thumbnails. There is also builtin
-              searchbar
-            </p>
-            <a href="github.com">Link</a>
-            <a href="github.com">Github</a>
-            <a href="github.com">More about this project</a>
-          </div>
-        </div>
-        <div className="project-card">
-          <img
-            className="project-card-image"
-            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            alt=""
-          />
-          <div className="card-overlay">
-            <a href="github.com">Github</a>
-          </div>
-        </div>
+        {data.map((item) => (
+          <ProjectCard key={item} data={item} />
+        ))}
       </div>
     </Wrapper>
   );

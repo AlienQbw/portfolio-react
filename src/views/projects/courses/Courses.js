@@ -6,13 +6,13 @@ import JonasSchmedtmannHtmlCssThumbnail from 'assets/resources/courses/jonasSchm
 import JonasSchmedtmannAdvancedStylingThumbnail from 'assets/resources/courses/jonasSchmedtmannAdvancedStyling.jpg';
 import FreeCodeCampReact10h from 'assets/resources/courses/freeCodeCampReact10h.jpg';
 
-const Courses = (props) => {
+const Courses = ({ changeBackground }) => {
   const [coursesList, setCoursesList] = useState([]);
   useEffect(() => {
-    props.changeBackground(true);
+    changeBackground(true);
 
     return () => {
-      props.changeBackground(false);
+      changeBackground(false);
     };
   }, []);
 

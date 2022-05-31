@@ -62,7 +62,10 @@ const Projects = ({ theme }) => {
             </div>
           }
         />
-        <Route path="/coding" element={<CodingProjects />} />
+        <Route
+          path="/coding"
+          element={<CodingProjects changeBackground={changeBackground} />}
+        />
         <Route
           path="/courses"
           element={<Courses changeBackground={changeBackground} />}
