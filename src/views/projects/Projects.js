@@ -70,7 +70,10 @@ const Projects = ({ theme }) => {
           path="/courses"
           element={<Courses changeBackground={changeBackground} />}
         />
-        <Route path="/hobbies" element={<Hobbies />} />
+        <Route
+          path="/hobbies"
+          element={<Hobbies changeBackground={changeBackground} />}
+        />
       </Routes>
     </Wrapper>
   );
