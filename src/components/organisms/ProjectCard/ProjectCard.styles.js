@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  position: relative;
   .projects-card {
     position: relative;
     background-color: ${({ theme: { colors } }) => colors.otherBackground1};
-    width: fit-content;
-    /* width: 100%; */
     height: 230px;
     border-radius: 0px 15px 15px 0;
     :before {
@@ -23,6 +23,7 @@ export const Wrapper = styled.div`
       float: left;
       height: 100%;
       max-width: 45%;
+      position: relative;
       img {
         display: block;
         aspect-ratio: 16/9;
@@ -31,7 +32,6 @@ export const Wrapper = styled.div`
       }
     }
     .project-information {
-      position: relative;
       float: left;
       max-width: 55%;
       text-align: left;
@@ -41,15 +41,16 @@ export const Wrapper = styled.div`
       p {
         margin: 0 0 20px 0;
         padding-left: 5px;
+        width: 100%;
       }
       .links {
         float: left;
       }
       .technology {
         position: absolute;
-        right: 0;
-        bottom: -10%;
-        width: 40%;
+        right: 20px;
+        bottom: 20px;
+        width: 30%;
         h4,
         li {
           color: ${({ theme: { colors } }) => colors.text};
