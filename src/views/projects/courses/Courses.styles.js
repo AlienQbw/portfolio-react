@@ -6,8 +6,13 @@ export const Wrapper = styled.div`
     padding: 20px;
     margin: 4%;
     margin-bottom: 0;
-    p {
+    h2 {
+      color: #f2f4f5;
+      border-left: 2px solid ${({ theme: { colors } }) => colors.orange};
       padding-left: 15px;
+    }
+    p {
+      padding-left: 25px;
     }
   }
   .grid-container {
