@@ -1,8 +1,12 @@
-import MinimalisticCover from '../assets/resources/project-covers/minimalistic.gif';
-import OldPortfolioCover from '../assets/resources/project-covers/bwladykacom.gif';
+import MinimalisticCover from '../assets/resources/project-covers/minimalistic.png';
+import OldPortfolioCover from '../assets/resources/project-covers/portfolio-old.png';
+import ImagesCompressor from '../assets/resources/project-covers/images-comperssor.png';
+import Portfolio from '../assets/resources/project-covers/portfolio.png';
+import Snake from '../assets/resources/project-covers/snake.png';
+
 const projectsData = [
   {
-    cover: MinimalisticCover,
+    cover: Portfolio,
     title: 'React Portfolio',
     description:
       'My current portfolio, designed in Figma and build using React',
@@ -29,7 +33,7 @@ const projectsData = [
     technology: ['html 44.2%', 'css 21.2%', 'javascript 18.1%', 'php 16.5%'],
   },
   {
-    cover: MinimalisticCover,
+    cover: ImagesCompressor,
     title: 'Images Compressor',
     description:
       'Application that converts images to lower quality in order to minimze the size. Algorithm was used in Minimalistic app for the thumbnails of wallpapers',
@@ -38,7 +42,7 @@ const projectsData = [
     technology: ['php 100%'],
   },
   {
-    cover: MinimalisticCover,
+    cover: Snake,
     title: 'Snake Game',
     description:
       'Application that converts images to lower quality in order to minimze the size. Algorithm was used in Minimalistic app for the thumbnails of wallpapers',
