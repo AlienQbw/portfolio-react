@@ -23,7 +23,12 @@ const Aside = () => {
         <Link to="/projects">
           <li
             className={
-              location === '/projects' ? 'aside-line active' : 'aside-line'
+              location === '/projects' ||
+              location === '/projects/coding' ||
+              location === '/projects/hobbies' ||
+              location === '/projects/courses'
+                ? 'aside-line active'
+                : 'aside-line'
             }
           >
             projects

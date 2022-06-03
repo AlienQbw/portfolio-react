@@ -11,6 +11,7 @@ export const theme = {
     css: '#563d7c',
     javascript: '#f1e05a',
     php: '#4F5D95',
+    arduino: '#147A7E',
   },
   fontSize: {
     esm: '12px',
