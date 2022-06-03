@@ -12,6 +12,10 @@ const TechnologyBar = ({ item }) => {
     });
   }, []);
 
-  return <Wrapper width={percentage[1]} color={color} item={item}></Wrapper>;
+  return (
+    <Wrapper width={percentage[1]} color={color} item={item}>
+      <h5 className="technology-title">{item}</h5>
+    </Wrapper>
+  );
 };
 export default TechnologyBar;

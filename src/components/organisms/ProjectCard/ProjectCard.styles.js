@@ -1,132 +1,156 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 80%;
-  height: 80%;
-  position: relative;
-  .projects-card {
-    width: 100%;
-    background-color: ${({ theme: { colors } }) => colors.otherBackground1};
-    border-radius: 0px 15px 15px 0;
-    .cover {
-      float: left;
-      height: 100%;
-      max-width: 55%;
-      img {
-        display: block;
-        aspect-ratio: 16/9;
-        max-width: 100%;
-        border-radius: 15px;
+  width: 47%;
+  height: 100%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .project-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 90%;
+    text-align: left;
+    h3 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 48px;
+      color: #000000;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    p {
+      margin: 0;
+      color: rgba(0, 0, 0, 0.41);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+  .project-information {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 20px 0;
+    position: relative;
+    width: 90%;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.92);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    .macos-dots {
+      padding-left: 15px;
+      .dot1,
+      .dot2,
+      .dot3 {
+        background-color: red;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        margin: 5px;
+      }
+      .dot1 {
+        float: left;
+        background-color: #ff5f56;
+      }
+      .dot2 {
+        float: left;
+        background-color: #ffbd2e;
+      }
+      .dot3 {
+        float: left;
+        background-color: #27c93f;
       }
     }
-    .project-information {
-      float: left;
-      max-width: 45%;
-      text-align: left;
-      h2 {
-        padding-left: 5px;
+    p {
+      margin: 0;
+      color: #fdfdfd;
+      .first-section {
+        padding-left: 20px;
       }
-      p {
-        margin: 0 0 20px 0;
-        padding-left: 5px;
-        width: 100%;
+      .second-section {
+        padding-left: 35px;
       }
-      .links {
-        float: left;
+      .third-section {
+        padding-left: 50px;
       }
-      .technology {
+      .fourth-section {
+        padding-left: 65px;
+      }
+      .fifth-section {
+        padding-left: 80px;
+        color: #e9aefe;
+      }
+      .span-blue {
+        color: #5985db;
+      }
+      .span-red {
+        color: #f7508b;
+      }
+    }
+  }
+  .technology {
+    width: 60%;
+    height: 20%;
+    margin-right: 28%;
+    h4 {
+      font-weight: 700;
+      font-size: ${({ theme: { fontSize } }) => fontSize.m};
+      line-height: 48px;
+      color: #000000;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-bottom: 0;
+    }
+  }
+  .project-links {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    a {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      border-radius: 15px;
+      margin: 10px;
+      background-color: #000000;
+      color: #fdfdfd;
+      padding: 5px;
+      width: 100px;
+      transition: 0.5s;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+      :before {
         position: absolute;
-        left: 20px;
-        bottom: 20%;
+        top: -110%;
+        left: 50%;
+        display: block;
+        content: '';
+        width: 0%;
+        height: 100%;
+        transition: 0.5s;
+      }
+      :hover:before {
+        transition: 0.5s;
+        left: 0;
+        top: 0;
         width: 100%;
-        padding: 0 50% 0 0;
-        h4,
-        li {
-          color: ${({ theme: { colors } }) => colors.text};
-        }
-        ul {
-          font-size: ${({ theme: { fontSize } }) => fontSize.esm};
-          display: grid;
-          width: 100%;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 5px;
-          text-transform: uppercase;
-          margin: 0;
-          padding: 10px 0 0 0;
-          li {
-            margin-left: 15px;
-          }
-        }
-        .technology-bar-container {
-          width: 100%;
-        }
+        border-bottom: 2px solid black;
+      }
+      :hover {
+        box-shadow: none;
+        transition: 0.5s;
+        background-color: white;
+        color: black;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      :checked {
+        transform: scale(1.2);
+        transition: 0.1s;
       }
     }
   }
 `;
-
-/*
-
-  width: 80%;
-  height: 80%;
-  position: relative;
-  .projects-card {
-    width: 100%;
-    background-color: ${({ theme: { colors } }) => colors.otherBackground1};
-    border-radius: 0px 15px 15px 0;
-    .cover {
-      float: left;
-      height: 100%;
-      max-width: 55%;
-      img {
-        display: block;
-        aspect-ratio: 16/9;
-        max-width: 100%;
-        border-radius: 15px;
-      }
-    }
-    .project-information {
-      float: left;
-      max-width: 45%;
-      text-align: left;
-      h2 {
-        padding-left: 5px;
-      }
-      p {
-        margin: 0 0 20px 0;
-        padding-left: 5px;
-        width: 100%;
-      }
-      .links {
-        float: left;
-      }
-      .technology {
-        position: absolute;
-        left: 20px;
-        bottom: 20%;
-        width: 100%;
-        padding: 0 50% 0 0;
-        h4,
-        li {
-          color: ${({ theme: { colors } }) => colors.text};
-        }
-        ul {
-          font-size: ${({ theme: { fontSize } }) => fontSize.esm};
-          display: grid;
-          width: 100%;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 5px;
-          text-transform: uppercase;
-          margin: 0;
-          padding: 10px 0 0 0;
-          li {
-            margin-left: 15px;
-          }
-        }
-        .technology-bar-container {
-          width: 100%;
-        }
-      }
-    }
-  }
-  */

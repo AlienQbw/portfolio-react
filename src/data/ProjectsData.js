@@ -8,6 +8,7 @@ const projectsData = [
   {
     cover: Portfolio,
     title: 'React Portfolio',
+    subtitle: 'personal Website',
     description:
       'My current portfolio, designed in Figma and build using React',
     github: 'google.com',
@@ -16,7 +17,8 @@ const projectsData = [
   },
   {
     cover: OldPortfolioCover,
-    title: 'First portfolio',
+    title: 'Portfolio',
+    subtitle: 'first personal website',
     description:
       'My first portfolio, source code for this is private, since I have built my own CMS, login form and data base for it using MySQL (but I am happy to show it in private).',
     github: 'google.com',
@@ -26,6 +28,7 @@ const projectsData = [
   {
     cover: MinimalisticCover,
     title: 'Minimalistic',
+    subtitle: 'wallpaper app',
     description:
       'Minimalistic is a simple wallpaper app that allows you to upload images. It has builtin search enginee (manually written)',
     github: 'google.com',
@@ -35,6 +38,7 @@ const projectsData = [
   {
     cover: ImagesCompressor,
     title: 'Images Compressor',
+    subtitle: 'image compressing app',
     description:
       'Application that converts images to lower quality in order to minimze the size. Algorithm was used in Minimalistic app for the thumbnails of wallpapers',
     github: 'google.com',
@@ -43,7 +47,8 @@ const projectsData = [
   },
   {
     cover: Snake,
-    title: 'Snake Game',
+    title: 'Snake',
+    subtitle: 'snake game',
     description:
       'Application that converts images to lower quality in order to minimze the size. Algorithm was used in Minimalistic app for the thumbnails of wallpapers',
     github: 'google.com',
