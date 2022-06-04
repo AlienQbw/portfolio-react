@@ -7,6 +7,7 @@ const ProjectCard = ({
     title,
     subtitle,
     description,
+    description2,
     github,
     liveversion,
     technology,
