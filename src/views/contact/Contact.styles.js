@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   }
   .contact-header-1 {
     position: absolute;
-    top: 10vh;
+    top: 13vh;
     left: 10vw;
     transform: rotate(-35deg);
     h2 {
