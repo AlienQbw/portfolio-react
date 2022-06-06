@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Wrapper } from './Courses.styles';
-import HelloRomanReactThumbnail from 'assets/resources/courses/helloRomanReact.jpg';
-import JonasSchmedtmannJavaScriptThumbnail from 'assets/resources/courses/jonasSchmedtmannJavaScript.jpg';
-import JonasSchmedtmannHtmlCssThumbnail from 'assets/resources/courses/jonasSchmedtmannHtmlCss.jpg';
-import JonasSchmedtmannAdvancedStylingThumbnail from 'assets/resources/courses/jonasSchmedtmannAdvancedStyling.jpg';
-import FreeCodeCampReact10h from 'assets/resources/courses/freeCodeCampReact10h.jpg';
+import HelloRomanReactThumbnail from 'assets/resources/courses/helloRomanReactCircle.jpg';
+import JonasSchmedtmannJavaScriptThumbnail from 'assets/resources/courses/jonasSchmedtmannJavaScriptCircle.jpg';
+import JonasSchmedtmannHtmlCssThumbnail from 'assets/resources/courses/jonasSchmedtmannHtmlCssCircle.jpg';
+import JonasSchmedtmannAdvancedStylingThumbnail from 'assets/resources/courses/jonasSchmedtmannAdvancedStylingCircle.jpg';
+import FreeCodeCampReact10h from 'assets/resources/courses/freeCodeCampReact10hCircle.jpg';
 
 const Courses = ({ changeBackground }) => {
   const [coursesList, setCoursesList] = useState([]);
@@ -47,7 +47,7 @@ const Courses = ({ changeBackground }) => {
   return (
     <Wrapper>
       <div className="description-container">
-        <h2>Knwoledge sources:</h2>
+        <h2>Knowledge sources:</h2>
         <p>
           What I've always loved about programming, is the idea of continuous
           development and improvement using lots of free and easily accessible
@@ -65,11 +65,35 @@ const Courses = ({ changeBackground }) => {
           highly recommend to everyone, are listed below:
         </p>
       </div>
+      <div className="resources">
+        <h2>Newsletter</h2>
+        <p>
+          I’m also highly recommending, subscription to the newsletter to keep
+          up with current trends. Those are some that I suggest:
+        </p>
+        <ul>
+          <li>
+            <a href="https://css-weekly.com/">cssweekly</a>
+          </li>
+          <li>
+            <a href="https://javascriptweekly.com/">JavaScript Weekly</a>
+          </li>
+          <li>
+            <a href="https://nodeweekly.com/">Node Weekly</a>
+          </li>
+          <li>
+            <a href="https://react.statuscode.com/">React status</a>
+          </li>
+        </ul>
+      </div>
       <div className="grid-container">
         {coursesList.map((item, id) => {
           return (
             <div className="grid-item" id={`grid-item-${id}`} key={id}>
-              <img src={item.thumbnail} alt="" />
+              <div className="grid-item-image">
+                <img src={item.thumbnail} alt="" />
+              </div>
+
               <div className="grid-item-heading">
                 <h3>{item.name}</h3>
               </div>
