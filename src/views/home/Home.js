@@ -7,7 +7,7 @@ const Home = () => {
   const navigate = useNavigate();
   /* TODO: learn how to get current location.pathname of the entire application */
   const intervalRef = useRef();
-  const titleText = 'Frontend Developer';
+  const titleText = 'Full-stack Developer';
   const [title, setTitle] = useState('F');
   if (title.length === titleText.length) {
     clearInterval(intervalRef.current);
