@@ -50,12 +50,19 @@ const About = () => {
           </div>
         </div>
         <div className="skills-container">
-          <h2>My core:</h2>
+          <h2>Frontend:</h2>
           <ul>
             <li>Javascript ES6+</li>
             <li>HTML5</li>
             <li>CSS3 and SASS</li>
             <li>React</li>
+          </ul>
+        </div>
+        <div className="skills-container">
+          <h2>Backend:</h2>
+          <ul>
+            <li>PHP</li>
+            <li>MySQL</li>
           </ul>
         </div>
         <div className="skills-container">
@@ -67,14 +74,6 @@ const About = () => {
             <li>Version control: Git</li>
             <li>Designning tools: Gimp, Figma, paper&pen</li>
             <li>Planning and organizing: Trello, Google Calendar</li>
-          </ul>
-        </div>
-        <div className="skills-container">
-          <h2>Also worked with:</h2>
-          <ul>
-            <li>PHP</li>
-            <li>SQL</li>
-            <li>Arduino</li>
           </ul>
         </div>
       </div>
