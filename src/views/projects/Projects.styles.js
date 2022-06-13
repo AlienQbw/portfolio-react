@@ -45,6 +45,30 @@ export const Wrapper = styled.div`
       }
     }
   }
+  @media screen and (max-width: 1000px), screen and (max-height: 450px) {
+    width: 100vw;
+    height: 100vh;
+    background-color: ${({ theme: { colors } }) => colors.background};
+    .human-image {
+      display: none;
+    }
+    .container {
+      .shape-image {
+        display: none;
+      }
+      .links-containers {
+        .discover-image {
+          display: none;
+        }
+        .link-container {
+          h2 {
+            font-size: ${({ theme: { fontSize } }) => fontSize.lm};
+          }
+          padding-left: 20px;
+        }
+      }
+    }
+  }
 
   @keyframes arrowJumping {
     0% {
