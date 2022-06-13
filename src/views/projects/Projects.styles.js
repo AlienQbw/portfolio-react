@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   height: calc(100vh - 80px);
   .human-image {
     position: absolute;
-    z-index: 99;
+    z-index: 1;
     bottom: 0px;
     right: 0;
   }
