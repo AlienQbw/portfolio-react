@@ -12,6 +12,19 @@ export const Wrapper = styled.div`
     transform: rotate(-35deg);
     h2 {
       font-size: ${({ theme: { fontSize } }) => fontSize.l};
+      position: relative;
+      overflow: hidden;
+      :after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: -100%;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+        background-color: ${({ theme: { colors } }) => colors.orange};
+        animation: headingUnderlineAnimation 3s ease-in-out infinite;
+      }
     }
   }
   .contact-header-2 {
@@ -128,6 +141,17 @@ export const Wrapper = styled.div`
     0%,
     80% {
       transform: rotateY(360deg);
+    }
+  }
+  @keyframes headingUnderlineAnimation {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
     }
   }
 `;
