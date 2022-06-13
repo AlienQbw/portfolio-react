@@ -37,4 +37,8 @@ export const Wrapper = styled.div`
     width: 90px;
     height: 4px;
   }
+
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 `;
