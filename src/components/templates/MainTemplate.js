@@ -4,7 +4,7 @@ import Wrapper from './MainTemplate.styles';
 const MainTemplate = ({ children }) => {
   return (
     <>
-      <Wrapper>
+      <Wrapper className="template-wrapper">
         <Navigation />
         <Aside />
         {children}
