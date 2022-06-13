@@ -62,4 +62,32 @@ export const Wrapper = styled.div`
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 1000px), screen and (max-height: 450px) {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .name {
+      padding: 0;
+      height: fit-content;
+      width: fit-content;
+
+      h1 {
+        width: 100%;
+      }
+      h2 {
+        span {
+          ::after {
+            display: none;
+          }
+        }
+      }
+    }
+    .home-svg {
+      display: none;
+    }
+  }
 `;
