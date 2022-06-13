@@ -49,7 +49,8 @@ const projectsData = [
     cover: Snake,
     title: 'Snake',
     subtitle: 'snake game',
-    description: 'Simple snake game, written in JavaScrip using canvas.',
+    description:
+      'Simple snake game, written in JavaScrip using canvas. It uses cookies to save the score in a text file on the server',
     github: 'google.com',
     liveversion: 'google.pl',
     technology: ['javascript 57.9%', 'php 27.7%', 'css 14.4%'],
