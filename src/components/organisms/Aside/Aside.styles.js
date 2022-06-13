@@ -38,7 +38,7 @@ export const Wrapper = styled.div`
     height: 4px;
   }
 
-  @media only screen and (max-width: 500px) {
+  @media screen and (max-width: 1000px), screen and (max-height: 450px) {
     display: none;
   }
 `;
