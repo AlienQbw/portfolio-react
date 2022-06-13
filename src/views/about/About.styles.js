@@ -55,4 +55,31 @@ export const Wrapper = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1000px), screen and (max-height: 450px) {
+    width: 100vw;
+    height: 100%;
+    .container {
+      display: block;
+      .about-container {
+        display: block;
+        .about-me {
+          padding: 10px;
+        }
+        .skills-experience {
+          padding: 0;
+        }
+      }
+      .skills-container {
+        text-align: center;
+        ul {
+          max-width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0;
+          list-style-type: none;
+        }
+      }
+    }
+  }
 `;
