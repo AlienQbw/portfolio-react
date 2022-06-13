@@ -9,9 +9,9 @@ const About = () => {
             <h1>About me</h1>
             <div className="paragraph">
               <p>
-                Hello, I'm a self-learning frontend developer, through research
-                & creation. I love writing websites, and discovering new
-                technologies.
+                Hello, I'm a self-learning full-stack developer, through
+                research & creation. I love writing websites, and discovering
+                new technologies.
                 <br />
                 <br />
                 I have just graduated (2022) from the Poznan University of
@@ -45,10 +45,13 @@ const About = () => {
                 <br />
                 <br />
                 I’ve completed online courses in languages of my interest, I’ve
+                studied documentation, and used forums as my primary source of
+                knowledge.
               </p>
             </div>
           </div>
         </div>
+        {/* TODO: icons, representing tech? */}
         <div className="skills-container">
           <h2>Frontend:</h2>
           <ul>
