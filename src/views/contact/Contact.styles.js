@@ -94,6 +94,9 @@ export const Wrapper = styled.div`
     right: 0;
     bottom: 0;
   }
+  .contact-image-mobile {
+    display: none;
+  }
   #white-env {
     animation: white-env 3s ease-in-out infinite;
     transform-origin: bottom left;
@@ -103,6 +106,51 @@ export const Wrapper = styled.div`
     animation: orange-env 3s ease-in-out infinite;
     transform-origin: bottom left;
     transform-box: fill-box;
+  }
+  /* TODO: check why does only last @media query applies */
+  @media screen and (max-width: 1000px), screen and (max-height: 450px) {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    .contact-header-1 {
+      transform: rotate(0);
+      left: 10vw;
+      top: 15vh;
+      h2 {
+        color: #fff;
+        font-size: ${({ theme: { fontSize } }) => fontSize.m};
+        border-bottom: 1px solid ${({ theme: { colors } }) => colors.orange};
+        ::after {
+          animation: none;
+        }
+      }
+    }
+    .contact-header-2 {
+      top: 20vh;
+      h1 {
+        font-size: ${({ theme: { fontSize } }) => fontSize.lm};
+      }
+    }
+    .contact-image {
+      display: none;
+    }
+    .contact-image-mobile {
+      display: block;
+    }
+  }
+  @media (orientation: landscape) and (max-width: 1000px) and (max-height: 450px) {
+    .contact-header-1 {
+      top: 30vh;
+      left: 55vw;
+    }
+    .contact-header-2 {
+      top: 40vh;
+      left: 60vw;
+    }
+    .contact-image-mobile {
+      transform: scale(0.5);
+    }
   }
   @keyframes white-env {
     0% {

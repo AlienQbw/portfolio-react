@@ -1,5 +1,6 @@
 import { Wrapper } from './Contact.styles';
 import MailSvg from '../../assets/svg/contact-page/MailSvg';
+import MobileSvg from '../../assets/svg/contact-page/mobile-mail.svg';
 const Contact = () => {
   return (
     <Wrapper>
@@ -25,6 +26,9 @@ const Contact = () => {
       </div>
       <div className="contact-image">
         <MailSvg />
+      </div>
+      <div className="contact-image-mobile">
+        <img src={MobileSvg} alt="" />
       </div>
     </Wrapper>
   );
