@@ -1,4 +1,3 @@
-import { findByLabelText } from '@testing-library/react';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -28,42 +27,45 @@ export const Wrapper = styled.div`
     }
     ul {
       margin-right: 80px;
-    }
-    ul li {
-      float: left;
-      font-size: ${({ theme }) => theme.fontSize.sm};
-      list-style-type: none;
-      margin: 5px 20px 5px 20px;
-    }
-    ul li a {
-      display: inline-block;
-      text-decoration: none;
-      color: ${({ theme: { colors } }) => colors.links};
-      border-bottom: 1px solid ${({ theme: { colors } }) => colors.orange};
-      border: transparent;
-      :hover {
-        transition: 0.25s;
-        transform: rotate(5deg);
-        border-bottom: 1px solid ${({ theme: { colors } }) => colors.orange};
+      li {
+        float: left;
+        font-size: ${({ theme }) => theme.fontSize.sm};
+        list-style-type: none;
+        margin: 5px 20px 5px 20px;
+        a {
+          display: inline-block;
+          text-decoration: none;
+          color: ${({ theme: { colors } }) => colors.links};
+          border-bottom: 1px solid ${({ theme: { colors } }) => colors.orange};
+          border: transparent;
+          :hover {
+            transition: 0.25s;
+            transform: rotate(5deg);
+            border-bottom: 1px solid ${({ theme: { colors } }) => colors.orange};
+          }
+          :active {
+            transition: 1s;
+            transform: scale(1.8);
+          }
+        }
       }
-      :active {
-        transition: 1s;
-        transform: scale(1.8);
-      }
     }
-    .nav-icon-links {
-      margin: 15px;
-      height: 40px;
-      width: 40px;
-
-      img {
+    .nav-icon-links-container {
+      .nav-icon-links {
+        margin: 15px;
         height: 40px;
         width: 40px;
+
+        img {
+          height: 40px;
+          width: 40px;
+        }
       }
     }
   }
 
-  @media screen and (max-width: 1000px), screen and (max-height: 450px) {
+  @media (orientation: portrait) and (max-width: 1000px),
+    screen and (max-height: 450px) {
     .hamburger {
       background: none;
       border: none;
@@ -100,6 +102,7 @@ export const Wrapper = styled.div`
     }
     .navigation-container {
       position: absolute;
+      overflow: hidden;
       z-index: 98;
       left: 0;
       top: 0;
@@ -107,8 +110,31 @@ export const Wrapper = styled.div`
       height: 100vh;
       ${({ overlayActive }) =>
         overlayActive ? 'display: flex' : 'display: none'};
-      flex-direction: column;
+      justify-content: center;
       background-color: ${({ theme: { colors } }) => colors.otherBackground3};
+      h3 {
+        display: none;
+      }
+      .nav-links {
+        flex-direction: column;
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            float: none;
+            text-align: center;
+            font-size: ${({ theme }) => theme.fontSize.lm};
+          }
+        }
+      }
+      .nav-icon-links-container {
+        margin: 10px;
+      }
+    }
+  }
+  @media (orientation: landscape) and (max-width: 1000px) and (max-height: 450px) {
+    .nav-links {
+      flex-direction: row;
     }
   }
 `;

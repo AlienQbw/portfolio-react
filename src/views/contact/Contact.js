@@ -5,9 +5,6 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className="contact-header-1">
-        <h2>Email me at</h2>
-      </div>
-      <div className="contact-header-2">
         <h1>
           <span id="span-1">b</span>
           <span id="span-2">w</span>

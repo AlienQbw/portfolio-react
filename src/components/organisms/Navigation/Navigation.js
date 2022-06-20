@@ -7,9 +7,13 @@ import { useState } from 'react';
 const Navigation = () => {
   const [overlayActive, setOverlayActive] = useState(false);
   const toggleOverlay = () => {
+    !overlayActive
+      ? (document.body.style.overflowY = 'hidden')
+      : (document.body.style.overflowY = 'visible');
     setOverlayActive(!overlayActive);
   };
   const overlayOff = () => {
+    document.body.style.overflowY = 'visible';
     setOverlayActive(false);
   };
   return (
@@ -41,20 +45,22 @@ const Navigation = () => {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
-          <a
-            className="nav-icon-links"
-            href="https://github.com/AlienQbw"
-            target="_blank"
-          >
-            <img src={githubIcon} alt="" />
-          </a>
-          <a
-            className="nav-icon-links"
-            href="https://www.linkedin.com/in/bartosz-w%C5%82adyka-6a6a39204"
-            target="_blank"
-          >
-            <img src={linkedinIcon} alt="" />
-          </a>
+          <div className="nav-icon-links-container">
+            <a
+              className="nav-icon-links"
+              href="https://github.com/AlienQbw"
+              target="_blank"
+            >
+              <img src={githubIcon} alt="" />
+            </a>
+            <a
+              className="nav-icon-links"
+              href="https://www.linkedin.com/in/bartosz-w%C5%82adyka-6a6a39204"
+              target="_blank"
+            >
+              <img src={linkedinIcon} alt="" />
+            </a>
+          </div>
         </div>
       </div>
     </Wrapper>

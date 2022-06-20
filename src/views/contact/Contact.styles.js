@@ -1,39 +1,14 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  h1,
-  h2 {
-    color: ${({ theme: { colors } }) => colors.text};
-  }
   .contact-header-1 {
-    position: absolute;
-    top: 13vh;
-    left: 10vw;
-    transform: rotate(-35deg);
-    h2 {
-      font-size: ${({ theme: { fontSize } }) => fontSize.l};
-      position: relative;
-      overflow: hidden;
-      :after {
-        content: '';
-        position: absolute;
-        display: block;
-        left: -100%;
-        bottom: 0;
-        height: 4px;
-        width: 100%;
-        background-color: ${({ theme: { colors } }) => colors.orange};
-        animation: headingUnderlineAnimation 3s ease-in-out infinite;
-      }
-    }
-  }
-  .contact-header-2 {
     position: absolute;
     left: 20vw;
     top: 30vh;
     z-index: 1;
     h1 {
       font-size: ${({ theme: { fontSize } }) => fontSize.xl};
+      color: ${({ theme: { colors } }) => colors.text};
       span {
         display: inline-block;
       }
@@ -91,6 +66,7 @@ export const Wrapper = styled.div`
   }
   .contact-image {
     position: absolute;
+    z-index: -1;
     right: 0;
     bottom: 0;
   }
@@ -107,26 +83,13 @@ export const Wrapper = styled.div`
     transform-origin: bottom left;
     transform-box: fill-box;
   }
-  /* TODO: check why does only last @media query applies */
+
   @media screen and (max-width: 1000px), screen and (max-height: 450px) {
     width: 100vw;
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
     .contact-header-1 {
-      transform: rotate(0);
-      left: 10vw;
-      top: 15vh;
-      h2 {
-        color: #fff;
-        font-size: ${({ theme: { fontSize } }) => fontSize.m};
-        border-bottom: 1px solid ${({ theme: { colors } }) => colors.orange};
-        ::after {
-          animation: none;
-        }
-      }
-    }
-    .contact-header-2 {
       top: 20vh;
       h1 {
         font-size: ${({ theme: { fontSize } }) => fontSize.lm};
@@ -141,10 +104,6 @@ export const Wrapper = styled.div`
   }
   @media (orientation: landscape) and (max-width: 1000px) and (max-height: 450px) {
     .contact-header-1 {
-      top: 30vh;
-      left: 55vw;
-    }
-    .contact-header-2 {
       top: 40vh;
       left: 60vw;
     }
@@ -189,17 +148,6 @@ export const Wrapper = styled.div`
     0%,
     80% {
       transform: rotateY(360deg);
-    }
-  }
-  @keyframes headingUnderlineAnimation {
-    0% {
-      left: -100%;
-    }
-    50% {
-      left: 0;
-    }
-    100% {
-      left: -100%;
     }
   }
 `;
