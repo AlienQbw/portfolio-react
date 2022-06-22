@@ -78,6 +78,13 @@ export const Wrapper = styled.div`
       h1 {
         width: 100%;
       }
+    }
+    .home-svg {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .name {
       h2 {
         span {
           ::after {
@@ -85,9 +92,6 @@ export const Wrapper = styled.div`
           }
         }
       }
-    }
-    .home-svg {
-      display: none;
     }
   }
 `;

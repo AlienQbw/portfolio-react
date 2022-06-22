@@ -153,4 +153,26 @@ export const Wrapper = styled.div`
       }
     }
   }
+  @media (max-width: 1000px), (max-height: 450px) {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .project-title {
+      h3 {
+        margin-top: 20px;
+        color: #fff;
+      }
+      p {
+        color: rgba(255, 255, 255, 0.41);
+      }
+    }
+    .technology {
+      width: 90%;
+      margin: 0;
+      margin-bottom: 40px;
+      h4 {
+        color: #fff;
+      }
+    }
+  }
 `;

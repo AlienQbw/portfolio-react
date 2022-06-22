@@ -106,4 +106,21 @@ export const Wrapper = styled.div`
     #grid-item-1 {
     }
   }
+  @media (max-width: 1000px), (max-height: 450px) {
+    margin-top: 80px;
+    .resources {
+      ul {
+        padding: 0;
+        flex-direction: column;
+        li {
+          a {
+            color: ${({ theme: { colors } }) => colors.links};
+          }
+        }
+      }
+    }
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
 `;

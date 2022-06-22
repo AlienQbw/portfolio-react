@@ -13,7 +13,6 @@ const MainTemplate = ({ children }) => {
     windowHeight < 450 || windowWidth < 1000
       ? setIsMobile(true)
       : setIsMobile(false);
-    console.log(windowHeight, windowWidth);
   }
 
   useEffect(() => {

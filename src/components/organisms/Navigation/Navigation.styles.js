@@ -64,8 +64,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  @media (orientation: portrait) and (max-width: 1000px),
-    screen and (max-height: 450px) {
+  @media (max-width: 920px), screen and (max-height: 450px) {
     .hamburger {
       background: none;
       border: none;
@@ -132,7 +131,7 @@ export const Wrapper = styled.div`
       }
     }
   }
-  @media (orientation: landscape) and (max-width: 1000px) and (max-height: 450px) {
+  @media (orientation: landscape) and (max-width: 900px) and (max-height: 450px) {
     .nav-links {
       flex-direction: row;
     }

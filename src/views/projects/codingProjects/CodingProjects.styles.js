@@ -45,4 +45,14 @@ export const Wrapper = styled.div`
   .project-card {
     height: 100%;
   }
+  @media (max-width: 1000px), (max-height: 450px) {
+    height: fit-content;
+    margin-top: 90px;
+    .projects-titles-container {
+      display: none;
+    }
+    .project-card {
+      width: 100%;
+    }
+  }
 `;
