@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { Wrapper } from './Navigation.styles';
 import githubIcon from '../../../assets/resources/icons/GitHub.png';
 import linkedinIcon from '../../../assets/resources/icons/linkedIn.png';
-import { useState } from 'react';
 
 const Navigation = () => {
   const [overlayActive, setOverlayActive] = useState(false);

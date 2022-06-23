@@ -84,33 +84,6 @@ export const Wrapper = styled.div`
     transform-box: fill-box;
   }
 
-  @media screen and (max-width: 1000px), screen and (max-height: 450px) {
-    width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
-    .contact-header-1 {
-      top: 20vh;
-      h1 {
-        font-size: ${({ theme: { fontSize } }) => fontSize.lm};
-      }
-    }
-    .contact-image {
-      display: none;
-    }
-    .contact-image-mobile {
-      display: block;
-    }
-  }
-  @media (orientation: landscape) and (max-width: 1000px) and (max-height: 450px) {
-    .contact-header-1 {
-      top: 40vh;
-      left: 60vw;
-    }
-    .contact-image-mobile {
-      transform: scale(0.5);
-    }
-  }
   @keyframes white-env {
     0% {
       transform: rotate(0deg);

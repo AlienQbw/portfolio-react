@@ -1,8 +1,12 @@
 import { Wrapper } from './Contact.styles';
 import MailSvg from '../../assets/svg/contact-page/MailSvg';
-import MobileSvg from '../../assets/svg/contact-page/mobile-mail.svg';
+import useCheckIfMobile from 'hooks/useCheckIfMobile';
+import ContactMobile from './ContactMobile';
 const Contact = () => {
-  return (
+  const isMobile = useCheckIfMobile();
+  return isMobile ? (
+    <ContactMobile />
+  ) : (
     <Wrapper>
       <div className="contact-header-1">
         <h1>
@@ -23,9 +27,6 @@ const Contact = () => {
       </div>
       <div className="contact-image">
         <MailSvg />
-      </div>
-      <div className="contact-image-mobile">
-        <img src={MobileSvg} alt="" />
       </div>
     </Wrapper>
   );
