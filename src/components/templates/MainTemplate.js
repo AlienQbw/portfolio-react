@@ -1,28 +1,10 @@
 import Aside from 'components/organisms/Aside/Aside';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import useCheckIfMobile from 'hooks/useCheckIfMobile';
 import Navigation from '../organisms/Navigation/Navigation';
 import Wrapper from './MainTemplate.styles';
 
 const MainTemplate = ({ children }) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  function updateWindowDimensions() {
-    let windowHeight = window.innerHeight;
-    let windowWidth = window.innerWidth;
-    windowHeight < 450 || windowWidth < 1000
-      ? setIsMobile(true)
-      : setIsMobile(false);
-  }
-
-  useEffect(() => {
-    updateWindowDimensions();
-    window.addEventListener('resize', () => updateWindowDimensions());
-    return () => {
-      window.removeEventListener('resize', () => updateWindowDimensions());
-    };
-  }, []);
-
+  const isMobile = useCheckIfMobile();
   return (
     <>
       <Wrapper>

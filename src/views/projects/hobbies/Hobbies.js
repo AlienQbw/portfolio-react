@@ -1,14 +1,17 @@
 import { Wrapper } from './Hobbies.styles';
 import { useEffect } from 'react';
+import useCheckIfMobile from 'hooks/useCheckIfMobile';
 
 const Hobbies = ({ changeBackground }) => {
+  const isMobile = useCheckIfMobile();
+
   useEffect(() => {
-    changeBackground(true);
+    changeBackground(false);
 
     return () => {
-      changeBackground(false);
+      isMobile ? changeBackground(false) : changeBackground(true);
     };
-  }, []);
+  }, [isMobile]);
   return (
     <Wrapper>
       <div className="hobbies-title">

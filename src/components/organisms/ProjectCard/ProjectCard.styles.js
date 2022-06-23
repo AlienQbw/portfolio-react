@@ -153,13 +153,19 @@ export const Wrapper = styled.div`
       }
     }
   }
+  @media (max-width: 1050px) {
+    .project-title {
+      h3 {
+        margin-top: 30px;
+      }
+    }
+  }
   @media (max-width: 1000px), (max-height: 450px) {
     width: 100%;
     height: 100%;
     overflow: hidden;
     .project-title {
       h3 {
-        margin-top: 20px;
         color: #fff;
       }
       p {

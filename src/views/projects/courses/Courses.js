@@ -5,16 +5,19 @@ import JonasSchmedtmannJavaScriptThumbnail from 'assets/resources/courses/jonasS
 import JonasSchmedtmannHtmlCssThumbnail from 'assets/resources/courses/jonasSchmedtmannHtmlCssCircle.jpg';
 import JonasSchmedtmannAdvancedStylingThumbnail from 'assets/resources/courses/jonasSchmedtmannAdvancedStylingCircle.jpg';
 import FreeCodeCampReact10h from 'assets/resources/courses/freeCodeCampReact10hCircle.jpg';
+import useCheckIfMobile from 'hooks/useCheckIfMobile';
 
 const Courses = ({ changeBackground }) => {
   const [coursesList, setCoursesList] = useState([]);
+  const isMobile = useCheckIfMobile();
+
   useEffect(() => {
-    changeBackground(true);
+    changeBackground(false);
 
     return () => {
-      changeBackground(false);
+      isMobile ? changeBackground(false) : changeBackground(true);
     };
-  }, []);
+  }, [isMobile]);
 
   const data = [
     {

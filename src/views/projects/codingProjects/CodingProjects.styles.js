@@ -45,6 +45,20 @@ export const Wrapper = styled.div`
   .project-card {
     height: 100%;
   }
+  @media (max-width: 1250px) {
+    .projects-titles-container {
+      h2 {
+        padding: 0;
+      }
+      .active-title {
+        color: ${({ theme: { colors } }) => colors.orange};
+        :after {
+          display: none;
+        }
+      }
+    }
+  }
+
   @media (max-width: 1000px), (max-height: 450px) {
     height: fit-content;
     margin-top: 90px;

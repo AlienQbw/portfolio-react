@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react';
 import { Wrapper } from './CodingProjects.styles';
 import projectsData from 'data/ProjectsData';
 import ProjectCard from 'components/organisms/ProjectCard/ProjectCard';
-import arrow from '../../../assets/svg/single-arrow.png';
+import useCheckIfMobile from 'hooks/useCheckIfMobile';
+
 const CodingProjects = ({ changeBackground }) => {
+  const isMobile = useCheckIfMobile();
+
   const [data, setData] = useState([
     {
       cover: '',
@@ -18,6 +21,13 @@ const CodingProjects = ({ changeBackground }) => {
   const changeActiveProject = (id) => {
     setActiveProject(id);
   };
+  useEffect(() => {
+    isMobile ? changeBackground(false) : changeBackground(true);
+    return () => {
+      isMobile ? changeBackground(false) : changeBackground(true);
+    };
+  }, [isMobile]);
+
   useEffect(() => {
     //changeBackground(true);
     setData([...projectsData]);

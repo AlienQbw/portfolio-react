@@ -1,26 +1,29 @@
+import { useEffect, useState } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 import { Wrapper } from './Projects.styles';
 import HumanImage from '../../assets/svg/projects-svg/human-talking.svg';
 import Shape from '../../assets/svg/square-circle-shape.svg';
 import DiscoverMore from '../../assets/svg/discover-more.svg';
-/* import TopBarButtonsImage from '../../assets/svg/projects-svg/top-bar-elements/top-bar-button-elements2.svg';
-import TopBarSquaresImage from '../../assets/svg/projects-svg/top-bar-elements/top-bar-square-elements.svg';
-import TopBarMiddleImage from '../../assets/svg/projects-svg/top-bar-elements/top-bar-middle-element.svg'; */
-import { Link, Route, Routes } from 'react-router-dom';
 import CodingProjects from './codingProjects/CodingProjects';
 import Hobbies from './hobbies/Hobbies';
 import Courses from './courses/Courses';
-import { useEffect, useState } from 'react';
+import useCheckIfMobile from 'hooks/useCheckIfMobile';
 
-const Projects = ({ theme }) => {
+const Projects = () => {
   /* TODO: clean unused .svg's */
-  const [toggleBackground, setToggleBackground] = useState(true);
+  const isMobile = useCheckIfMobile();
+
+  const [gradientBackground, setgradientBackground] = useState(true);
 
   const changeBackground = (val) => {
-    val ? setToggleBackground(false) : setToggleBackground(true);
+    val ? setgradientBackground(true) : setgradientBackground(false);
   };
+  useEffect(() => {
+    isMobile ? changeBackground(false) : changeBackground(true);
+  }, [isMobile]);
 
   useEffect(() => {
-    toggleBackground
+    gradientBackground
       ? (document.body.style.background =
           'linear-gradient(to right,#15304B 0%,#15304B 60%,#ffffff 50%,#ffffff 100%)')
       : (document.body.style.background = '#15304B');
@@ -28,7 +31,7 @@ const Projects = ({ theme }) => {
     return () => {
       document.body.style.background = '#15304B';
     };
-  }, [toggleBackground]);
+  }, [gradientBackground]);
 
   return (
     <Wrapper>

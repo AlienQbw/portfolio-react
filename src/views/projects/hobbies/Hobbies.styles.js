@@ -63,7 +63,7 @@ export const Wrapper = styled.div`
         color: #000;
         font-size: ${({ theme: { fontSize } }) => fontSize.m};
         border-bottom: 2px solid ${({ theme: { colors } }) => colors.orange};
-        z-index: 99;
+        z-index: 20;
       }
       .hobbies-card-overlay {
         position: absolute;
@@ -100,6 +100,32 @@ export const Wrapper = styled.div`
     }
     to {
       transform: translateX(0);
+    }
+  }
+  @media (max-width: 1000px), (max-height: 450px) {
+    height: 100%;
+    margin-top: 80px;
+    .hobbies-title {
+      display: none;
+    }
+    .hobbies-container {
+      flex-direction: column;
+      justify-content: center;
+      .hobbies-card {
+        margin: 15px 0 15px 0;
+        .hobbies-card-overlay {
+          display: none;
+        }
+      }
+    }
+  }
+  @media (orientation: landscape) and (max-width: 1000px), (max-height: 450px) {
+    height: auto;
+    .hobbies-container {
+      .hobbies-card {
+        width: 80%;
+        height: 350px;
+      }
     }
   }
 `;

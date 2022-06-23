@@ -2,6 +2,7 @@ import { Wrapper } from './Home.styles';
 import HomeImage from '../../assets/svg/home-image.svg';
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 const Home = () => {
   /* TODO: learn how to use Navigate */
   const navigate = useNavigate();
