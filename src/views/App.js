@@ -10,6 +10,7 @@ import Projects from './projects/Projects';
 import Contact from './contact/Contact';
 
 function App() {
+  console.log(`testing functionality`);
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
